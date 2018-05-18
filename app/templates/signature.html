@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div><h1>Генератор подписей</h1></div>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.first_name.label }}<br>
+            {{ form.first_name(size=32) }}
+        </p>
+        <p>
+            {{ form.last_name.label }}<br>
+            {{ form.last_name(size=32) }}
+        </p>
+        <p>
+            {{ form.position.label }}<br>
+            {{ form.position(size=32) }}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}
+        </p>
+        <p>
+            {{ form.mob.label }}<br>
+            {{ form.mob(size=32) }}
+        </p>
+        <p>{{ form.submit() }} </p>
+    </form>
+{% endblock %}
